@@ -209,7 +209,7 @@ const HomePage = () => {
     },
 
     teamButton: {
-      color: #f7f9fc",
+      color: "#f7f9fc",
       backgroundColor: "#2c5282",
       width: "fit-content",
       height: isMobile ? "45px" : "50px",
