@@ -103,7 +103,7 @@ const HomePage = () => {
     sectionTitle: {
       fontSize: isSmallMobile ? "1.8rem" : isMobile ? "2rem" : "2.5rem",
       marginBottom: "1rem",
-      color: "#001F3F",
+      color: "#2c5282",
       textAlign: isMobile ? "center" : "left",
     },
 
@@ -126,7 +126,7 @@ const HomePage = () => {
 
     serviceCard: {
       width: isMobile ? "100%" : isTablet ? "calc(50% - 10px)" : "calc(20% - 16px)",
-      minWidth: isMobile ? "auto" : "200px",
+      minWidth: isMobile ? "auto" : "170px",
       marginBottom: isMobile ? "30px" : "20px",
       padding: "20px",
       backgroundColor: "white",
@@ -160,7 +160,7 @@ const HomePage = () => {
     leadershipSection: {
       padding: isMobile ? "30px 15px" : "40px 20px",
       color: "#f7f9fc",
-      backgroundColor: "#4a5568",
+      backgroundColor: "#2c5282",
     },
 
     leadershipGrid: {
@@ -170,7 +170,7 @@ const HomePage = () => {
     leaderCard: {
       display: "flex",
       flexDirection: isMobile ? "column" : "row",
-      margin: isMobile ? "30px 0" : "40px 0",
+      margin: isMobile ? "25px 0" : "40px 0",
       lineHeight: "1.6",
       justifyContent: isMobile ? "center" : "space-around",
       alignItems: "center",
