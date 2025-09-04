@@ -209,8 +209,8 @@ const HomePage = () => {
     },
 
     teamButton: {
-      color: "#2c5282",
-      backgroundColor: "#f7f9fc",
+      color: #f7f9fc",
+      backgroundColor: "#2c5282",
       width: "fit-content",
       height: isMobile ? "45px" : "50px",
       padding: isMobile ? "0 20px" : "0 30px",
