@@ -95,8 +95,6 @@ const HomePage = () => {
 
     // Who We Serve Section Styles
     whoWeServeSection: {
-      display: "flex",
-      justifyContent: "center",
       padding: isMobile ? "40px 20px" : "40px 20px",
       minHeight: isMobile ? "auto" : "70vh",
       backgroundColor: "#f7f9fc",
