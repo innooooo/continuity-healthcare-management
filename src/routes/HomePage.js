@@ -125,10 +125,10 @@ const HomePage = () => {
     },
 
     serviceCard: {
-      width: isMobile ? "100%" : isTablet ? "calc(50% - 10px)" : "calc(20% - 16px)",
+      width: isMobile ? "90%" : isTablet ? "calc(50% - 10px)" : "calc(20% - 16px)",
       minWidth: isMobile ? "auto" : "170px",
-      marginBottom: isMobile ? "30px" : "20px",
-      padding: "20px",
+      marginBottom: isMobile ? "20px" : "15px",
+      padding: "10px",
       backgroundColor: "white",
       borderRadius: "12px",
       boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
@@ -159,8 +159,7 @@ const HomePage = () => {
     // Leadership Section Styles
     leadershipSection: {
       padding: isMobile ? "30px 15px" : "40px 20px",
-      color: "#f7f9fc",
-      backgroundColor: "#2c5282",
+      backgroundColor: "#f7f9fc",
     },
 
     leadershipGrid: {
