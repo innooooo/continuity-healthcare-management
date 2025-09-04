@@ -95,7 +95,7 @@ const HomePage = () => {
 
     // Who We Serve Section Styles
     whoWeServeSection: {
-      padding: isMobile ? "20px 15px" : "40px 20px",
+      padding: isMobile ? "40px 20px" : "40px 20px",
       minHeight: isMobile ? "auto" : "70vh",
       backgroundColor: "#f7f9fc",
     },
@@ -187,7 +187,7 @@ const HomePage = () => {
 
     leaderContent: {
       flex: 1,
-      maxWidth: isMobile ? "100%" : "600px",
+      maxWidth: isMobile ? "100%" : "100%",
     },
 
     leaderName: {
