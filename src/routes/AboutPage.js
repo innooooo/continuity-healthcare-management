@@ -1,9 +1,89 @@
-import React from 'react'
+import {useState} from 'react';
+import ShareholderModal from '../components/ShareholderModal.js';
 
 const AboutPage = () => {
+
+  // Responsive breakpoints
+  const [screenSize, setScreenSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
+  const isMobile = screenSize.width <= 768;
+  const isTablet = screenSize.width > 768 && screenSize.width <= 1024;
+  const isSmallMobile = screenSize.width <= 480;
+
   return (
     <div>
-      
+      <section style={{
+        backgroundImage: "url('/images/about-bg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "50vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        color: "white", // ensures text stands out
+        textAlign: "center",
+        padding: "0 20px",
+        position: "relative"
+        }}>
+        
+        {/* Shadow overlay */}
+        <div style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(0, 0, 0, 0.5)", // Adjust opacity for shadow intensity
+          zIndex: 1
+        }}></div>
+        
+        {/* Content with higher z-index to appear above shadow */}
+        <div style={{ 
+          position: "relative", 
+          zIndex: 2 
+        }}>
+          <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
+            Transforming Efficiency and Care through Innovative Solutions
+          </h2>
+          
+        </div>
+
+      </section>
+
+      <section> 
+        <ShareholderModal />
+      </section>
+
+      <section>
+        <h1 style={{textAlign:"center"}}>Who We Are</h1>
+        <p style={{margin:"20px"}}>
+          The start-up is founded on the principle that interdisciplinary collaboration drives innovation. The core team includes:
+          <ul>
+            <li><b>Healthcare Consultants:</b> Experts in medical practice management, patient care protocols, and regulatory compliance.</li>
+            <li><b>Logistics Specialists:</b> Professionals with deep knowledge of supply chain management, distribution networks, and transport optimization.</li>
+            <li><b>IT and Data Analysts:</b> Skilled in integrating technology solutions, managing data security, and translating analytics into action.</li>
+            <li><b>Project Managers:</b> Coordinators who ensure that projects are delivered on time, within scope, and in line with client expectations.</li>
+          </ul>
+        </p>
+      </section>
+
+      <section>
+        <h1 style={{textAlign:"center"}}>What Sets Us Apart</h1>
+        <p style={{margin:"20px"}}>
+          We leverage cutting-edge technologies such as <b>data analytics</b> to harness big data to predict demand and optimize inventory, 
+          <b>cloud-based platforms</b> to facilitate secure sharing of medical and logistical information, as well as <b>automation & AI </b>
+          to free up human resources and enhance delivery efficiency through AI-driven route optimization
+          <ul>
+            <li><b>Industry Expertise</b>: The founding team comprises professionals with deep experience in both healthcare and logistics, ensuring a holistic approach to every project</li>
+            <li><b>Client-Centric Ethos</b>: A strong focus on customer needs, transparency, and long-term relationship-building sets the firm apart</li>
+            <li><b>Scalability</b>: Solutions are designed to grow with clients, adaptable for small clinics as well as major hospital systems</li>
+            <li><b>Agility & Responsiveness</b>: The start-up's streamlined structure allows for rapid response to client requests and market shifts</li>
+          </ul>
+        </p>       
+      </section>
     </div>
   )
 }

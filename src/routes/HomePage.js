@@ -95,6 +95,9 @@ const HomePage = () => {
 
     // Who We Serve Section Styles
     whoWeServeSection: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems:"center",
       padding: isMobile ? "40px 20px" : "40px 20px",
       minHeight: isMobile ? "auto" : "70vh",
       backgroundColor: "#f7f9fc",
@@ -158,6 +161,9 @@ const HomePage = () => {
 
     // Leadership Section Styles
     leadershipSection: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
       padding: isMobile ? "30px 15px" : "40px 20px",
       backgroundColor: "#f7f9fc",
     },
@@ -209,8 +215,8 @@ const HomePage = () => {
     },
 
     teamButton: {
-      color: "#f7f9fc",
-      backgroundColor: "#2c5282",
+      color: "#2c5282",
+      backgroundColor: "#f7f9fc",
       width: "fit-content",
       height: isMobile ? "45px" : "50px",
       padding: isMobile ? "0 20px" : "0 30px",
@@ -295,23 +301,23 @@ const HomePage = () => {
 
   const leaders = [
     {
-      image: '/shareholders/qiana.webp',
+      image: '/shareholders/qiana.jpg',
       name: 'Qiana Mayberry - Co-Founder & Principal Consultant',
       bio: 'Qiana Mayberry, MSHA, OCHW, is a healthcare operations strategist, provider network expert, and consultant specializing in revenue cycle management and project management'
     },
     {
-      image: '/shareholders/talita.webp',
+      image: '/shareholders/talita.jpeg',
       name: 'Talita - Co-Founder & Principal Consultant',
       bio: 'Talita is a creative leader and co-founder of Continuity Healthcare Management, LLC, who has worked in the healthcare field for over 15 years'
     },
     {
-      image: '/shareholders/dana.webp',
+      image: '/shareholders/dana.jpeg',
       name: 'Dana D. Floyd - Co-Founder & Principal Consultant',
       bio: 'Dana is a principal consultant and co-founder of Continuity Healthcare Management, LLC, with more than 15 years of expertise in RCM, healthcare operations and project execution'
     },
     {
-      image: '/shareholders/jr.webp',
-      name: 'JR - Co-Founder & Arbitrator',
+      image: '/shareholders/jr.png',
+      name: 'James Jackson Jr - Co-Founder & Arbitrator',
       bio: 'With over two decades of experience in logistics, operations and dispute resolution, JR brings a solution-focused approach to healthcare, RCM and consulting business operations'
     }
   ];
@@ -339,8 +345,7 @@ const HomePage = () => {
       <section style={styles.whoWeServeSection}>
         <h1 style={styles.sectionTitle}>Who We Serve</h1>
         <span style={styles.sectionSubtitle}>
-          Our expertise spans the entire healthcare ecosystem, providing tailored Revenue Cycle Management (RCM) 
-          solutions designed to meet the unique needs of diverse providers.
+          Our expertise spans the entire healthcare ecosystem, providing tailored Revenue Cycle Management (RCM) solutions designed to meet the unique needs of diverse providers.
         </span>
         
         <div style={styles.servicesGrid}>
