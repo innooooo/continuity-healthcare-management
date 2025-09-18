@@ -90,7 +90,7 @@ const HomePage = () => {
       cursor: "pointer",
       transition: "all 0.3s ease",
       boxShadow: "0 4px 8px rgba(0,0,0,0.3)",
-      minWidth: isMobile ? "140px" : "160px",
+      minWidth: isMobile ? "140px" : "160px"
     },
 
     // Who We Serve Section Styles

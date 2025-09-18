@@ -115,7 +115,7 @@ const containerStyle = {
 };
 
 const titleStyle = {
-  fontSize: '2.5rem',
+  fontSize: '2rem',
   fontWeight: '700',
   textAlign: 'center',
   marginBottom: '0.5rem',
