@@ -15,43 +15,58 @@ const AboutPage = () => {
   return (
     <div>
       <section style={{
-        backgroundImage: "url('/images/about-bg.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "50vh",
+        position: "relative",
+        minHeight: "50vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        color: "white", // ensures text stands out
         textAlign: "center",
         padding: "0 20px",
-        position: "relative"
-        }}>
-        
-        {/* Shadow overlay */}
+        color: "white",
+        overflow: "hidden"
+      }}>
+        {/* Responsive background image */}
+        <picture>
+          {/* Mobile */}
+          <source srcSet="/images/about-bg.jpg" media="(max-width: 640px)" />
+          {/* Tablet */}
+          <source srcSet="/images/about-bg.jpg" media="(max-width: 1024px)" />
+          {/* Desktop */}
+          <img 
+            src="/images/about-bg.jpg" 
+            alt="About background" 
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              zIndex: 0
+            }}
+          />
+        </picture>
+
+        {/* Gradient overlay */}
         <div style={{
           position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.5)", // Adjust opacity for shadow intensity
+          background: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6))",
           zIndex: 1
         }}></div>
-        
-        {/* Content with higher z-index to appear above shadow */}
-        <div style={{ 
-          position: "relative", 
-          zIndex: 2 
-        }}>
-          <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
+
+        {/* Content */}
+        <div style={{ position: "relative", zIndex: 2, maxWidth: "800px" }}>
+          <h2 style={{ fontSize: "2.5rem", marginBottom: "1rem", lineHeight: "1.2" }}>
             Transforming Efficiency and Care through Innovative Solutions
           </h2>
-          
         </div>
-
       </section>
+
 
       <section> 
         <ShareholderModal />

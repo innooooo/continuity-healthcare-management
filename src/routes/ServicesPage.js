@@ -34,20 +34,39 @@ const Services = () => {
   return (
     <div>
       <section style={{
-        backgroundImage: "url('/images/services-bg.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "50vh",
+        position: "relative",
+        minHeight: "50vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        color: "white", // ensures text stands out
         textAlign: "center",
         padding: "0 20px",
-        position: "relative"
-        }}>
-        
+        color: "white",
+        overflow: "hidden"
+      }}>
+        {/* Responsive background image */}
+        <picture>
+          {/* Mobile */}
+          <source srcSet="/images/services-bg.jpg" media="(max-width: 640px)" />
+          {/* Tablet */}
+          <source srcSet="/images/services-bg.jpg" media="(max-width: 1024px)" />
+          {/* Desktop */}
+          <img 
+            src="/images/services-bg.jpg" 
+            alt="Our Services background" 
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              zIndex: 0
+            }}
+          />
+        </picture>
+
         {/* Shadow overlay */}
         <div style={{
           position: "absolute",
@@ -55,22 +74,19 @@ const Services = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.5)", // Adjust opacity for shadow intensity
+          background: "rgba(0, 0, 0, 0.5)",
           zIndex: 1
         }}></div>
-        
-        {/* Content with higher z-index to appear above shadow */}
-        <div style={{ 
-          position: "relative", 
-          zIndex: 2 
-        }}>
+
+        {/* Content */}
+        <div style={{ position: "relative", zIndex: 2 }}>
           <h3 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
             Transforming Efficiency and Care through Innovative Solutions
           </h3>
-          <h2 style={{fontWeight:"lighter"}}>Our Services</h2>
+          <h2 style={{ fontWeight: "lighter" }}>Our Services</h2>
         </div>
-
       </section>
+
 
       <section 
         style={{

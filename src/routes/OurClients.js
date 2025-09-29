@@ -78,19 +78,40 @@ const OurClients = () => {
     <div>
       {/* Hero */}
       <section style={{
-        backgroundImage: "url('/images/clients-bg.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "50vh",
+        position: "relative",
+        minHeight: "50vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        color: "white",
         textAlign: "center",
         padding: "0 20px",
-        position: "relative"
+        color: "white",
+        overflow: "hidden"
       }}>
+        {/* Responsive Background Image */}
+        <picture>
+          {/* Mobile */}
+          <source srcSet="/images/clients-bg.jpg" media="(max-width: 640px)" />
+          {/* Tablet */}
+          <source srcSet="/images/clients-bg.jpg" media="(max-width: 1024px)" />
+          {/* Desktop */}
+          <img
+            src="/images/clients-bg.jpg"
+            alt="Clients background"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              zIndex: 0
+            }}
+          />
+        </picture>
+
+        {/* Shadow Overlay */}
         <div style={{
           position: "absolute",
           top: 0,
@@ -101,12 +122,18 @@ const OurClients = () => {
           zIndex: 1
         }}></div>
 
+        {/* Foreground Content */}
         <div style={{ position: "relative", zIndex: 2 }}>
-          <h2 style={{ fontSize: isMobile ? "1.75rem" : "2.5rem", fontWeight: "700", marginBottom: "1rem" }}>
+          <h2 style={{
+            fontSize: isMobile ? "1.75rem" : "2.5rem",
+            fontWeight: "700",
+            marginBottom: "1rem"
+          }}>
             Transforming Efficiency and Care through Innovative Solutions
           </h2>
         </div>
       </section>
+
 
       {/* Intro */}
       <section>

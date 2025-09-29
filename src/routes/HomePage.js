@@ -30,68 +30,60 @@ const HomePage = () => {
   const styles = {
     // Hero Section Styles
     heroSection: {
-      backgroundImage: "url('/images/hero-bg2.webp')",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundAttachment: isMobile ? "scroll" : "fixed", // Fixed attachment can cause issues on mobile
-      height: isMobile ? "70vh" : "80vh",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      color: "white",
-      textAlign: "center",
-      padding: isMobile ? "0 15px" : "0 20px",
-      position: "relative",
-    },
-
-    heroOverlay: {
-      position: "absolute",
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      backgroundColor: "rgba(0, 0, 0, 0.4)", // Dark overlay for better text readability
-      zIndex: 1,
-    },
-
-    heroContent: {
-      position: "relative",
-      zIndex: 2,
-      maxWidth: "1200px",
-    },
-
-    heroTitle: {
-      fontSize: isSmallMobile ? "1.8rem" : isMobile ? "2.2rem" : isTablet ? "2.8rem" : "3.2rem",
-      fontWeight: "bold",
-      marginBottom: "1rem",
-      lineHeight: "1.2",
-      textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
-    },
-
-    heroSubtitle: {
-      fontSize: isSmallMobile ? "1.1rem" : isMobile ? "1.3rem" : "1.5rem",
-      fontWeight: "bolder",
-      marginBottom: "2rem",
-      textShadow: "1px 1px 2px rgba(0,0,0,0.7)",
-    },
-
-    heroButton: {
-      height: isMobile ? "45px" : "50px",
-      width: "fit-content",
-      padding: isMobile ? "0 20px" : "0 30px",
-      margin: "20px",
-      fontSize: isMobile ? "16px" : "20px",
-      fontWeight: "bolder",
-      backgroundColor: "#9CAF88",
-      color: "#001F3F",
-      border: "none",
-      borderRadius: "8px",
-      cursor: "pointer",
-      transition: "all 0.3s ease",
-      boxShadow: "0 4px 8px rgba(0,0,0,0.3)",
-      minWidth: isMobile ? "140px" : "160px"
-    },
+    position: "relative",
+    height: "80vh",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    overflow: "hidden",
+  },
+  heroBgImage: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    objectFit: "cover", // same as background-size: cover
+    objectPosition: "center", // same as background-position: center
+    zIndex: -2,
+  },
+  heroOverlay: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "rgba(0,0,0,0.5)", // semi-transparent overlay
+    zIndex: -1,
+  },
+  heroContent: {
+    color: "white",
+    padding: "0 20px",
+    maxWidth: "800px",
+  },
+  heroTitle: {
+    fontSize: "2.5rem",
+    fontWeight: "bold",
+    marginBottom: "1rem",
+  },
+  heroSubtitle: {
+    fontSize: "1.25rem",
+    display: "block",
+    marginBottom: "1.5rem",
+  },
+  heroButton: {
+    backgroundColor: "#2563eb",
+    color: "white",
+    padding: "0.75rem 1.5rem",
+    border: "none",
+    borderRadius: "0.375rem",
+    fontSize: "1rem",
+    fontWeight: "600",
+    cursor: "pointer",
+    transition: "background-color 0.3s",
+  },
 
     // Who We Serve Section Styles
     whoWeServeSection: {
@@ -326,20 +318,39 @@ const HomePage = () => {
     <div>
       {/* Hero Section */}
       <section style={styles.heroSection}>
+        {/* Responsive background image */}
+        <picture>
+          <source srcSet="/images/hero-bg2.webp" media="(max-width: 768px)" />
+          <source srcSet="/images/hero-bg2.webp" media="(min-width: 769px)" />
+          <img
+            src="/images/hero-bg2.webp" // fallback
+            alt="Healthcare revenue optimization background"
+            style={styles.heroBgImage}
+          />
+        </picture>
+
+        {/* Overlay */}
         <div style={styles.heroOverlay}></div>
+
+        {/* Content */}
         <div style={styles.heroContent}>
-          <h1 style={styles.heroTitle}>Revenue Reimagined: Optimize Your Healthcare Finances</h1>
-          <span style={styles.heroSubtitle}>Maximizing Your Revenue, Minimizing Your Burden</span>
-          <button 
-            onClick={() => navigateTo("/our-services")} 
+          <h1 style={styles.heroTitle}>
+            Revenue Reimagined: Optimize Your Healthcare Finances
+          </h1>
+          <span style={styles.heroSubtitle}>
+            Maximizing Your Revenue, Minimizing Your Burden
+          </span>
+          <button
+            onClick={() => navigateTo("/our-services")}
             style={styles.heroButton}
-            onMouseEnter={(e) => handleButtonHover(e, true, 'hero')}
-            onMouseLeave={(e) => handleButtonHover(e, false, 'hero')}
+            onMouseEnter={(e) => handleButtonHover(e, true, "hero")}
+            onMouseLeave={(e) => handleButtonHover(e, false, "hero")}
           >
             LEARN MORE
           </button>
         </div>
       </section>
+
 
       {/* Who We Serve Section */}
       <section style={styles.whoWeServeSection}>
