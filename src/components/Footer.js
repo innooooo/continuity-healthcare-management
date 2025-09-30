@@ -65,7 +65,7 @@ const Footer = () => {
                 to="http://innokoge-dev.vercel.app/"
                 className="designer-link"
               >
-                <b>INNOCENT KOGE</b>
+                <b>BLACK CATS TECH</b>
               </Link>
             </text>
           </span>
