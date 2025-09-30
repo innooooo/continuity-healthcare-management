@@ -43,10 +43,10 @@ const NavBar = () => {
 
     logoImage: {
       height: isMobile 
-        ? (window.innerWidth <= 480 ? "55px" : "60px")
+        ? (window.innerWidth <= 480 ? "65px" : "70px")
         : "130px",
       width: isMobile 
-        ? (window.innerWidth <= 480 ? "55px" : "60px") 
+        ? (window.innerWidth <= 480 ? "65px" : "70px") 
         : "auto",
       borderRadius: "50%",
       objectFit: "cover",
