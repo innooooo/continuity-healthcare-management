@@ -34,7 +34,7 @@ const NavBar = () => {
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
-      padding: isMobile ? "0.5rem 1rem" : "1.7rem 3rem",
+      padding: isMobile ? "0.5rem 1rem" : "0.5rem 3rem",
       backgroundColor: "#f7f9fc",
       borderBottom: "1px solid #D3D3D3",
       position: "relative",
@@ -42,14 +42,17 @@ const NavBar = () => {
     },
 
     logoImage: {
-      height: isMobile ? (window.innerWidth <= 480 ? "40px" : "50px") : "70px",
-      width: "auto",
+      height: isMobile 
+        ? (window.innerWidth <= 480 ? "55px" : "60px")
+        : "130px",
+      width: isMobile 
+        ? (window.innerWidth <= 480 ? "55px" : "60px") 
+        : "auto",
       borderRadius: "50%",
-      maxWidth: "90%",
-      transition: "transform 0.3s ease, height 0.3s ease",
-      transform: "scale(2)",
-    }
-    ,
+      objectFit: "cover",
+      maxWidth: "100%",
+      transition: "height 0.3s ease, width 0.3s ease",
+    },
 
     desktopNav: {
       display: isMobile ? "none" : "flex",
