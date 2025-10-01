@@ -58,14 +58,19 @@ const Footer = () => {
                   className="copyright-icon"
                 />
               </sup>
-              <text>2025 Continuity Health Care</text> | 
-              <text>All Rights Reserved</text> | 
-              <text>Designed Professionally By{' '}</text>
+              <text>  2025 Continuity Health Care</text>   <b>|</b> 
+              <text>  All Rights Reserved</text>   <b>|</b> 
+              <text>  Designed Professionally By{'   '}</text>
               <Link 
                 to="http://innokoge-dev.vercel.app/"
                 className="designer-link"
               >
-                <b>BLACK CATS TECH</b>
+                <b>InnSysTech</b>
+              </Link>
+              <Link 
+                to="disclaimer"
+                className="designer-link"
+              >Web Dev Disclaimer
               </Link>
             </text>
           </span>
