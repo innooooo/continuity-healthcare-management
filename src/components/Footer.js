@@ -67,11 +67,6 @@ const Footer = () => {
               >
                 <b>InnSysTech</b>
               </Link>
-              <Link 
-                to="disclaimer"
-                className="designer-link"
-              >Web Dev Disclaimer
-              </Link>
             </text>
           </span>
           <Link 
