@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 const NotFoundPage = () => {
   return (
     <div>
-      <section style={{display:"flex",flexDirection:"column",margin:"20px"}}>
+      <section style={{display:"flex",flexDirection:"column",alignItems:"center",margin:"20px"}}>
         <span>We can't find that page</span>
         <Link 
             to="/"
