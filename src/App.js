@@ -11,30 +11,37 @@ import './App.css';
 import Legal from './components/Legal';
 import NoSurpriseAct from './components/NoSurpriseAct';
 
-function App() {
-
+//Inner component that handles routing + analytics
+function AppRoutes() {
   const location = useLocation();
 
   useEffect(() => {
     if (window.va) {
-      window.va("pageview"); // fire analytics on every route change
+      window.va("pageview"); // track every route change
     }
   }, [location]);
 
   return (
+    <Routes>
+      <Route path='/' element={<NavBar />}>
+        <Route index element={<HomePage />} />
+        <Route path='our-services' element={<ServicesPage />} />
+        <Route path='about-us' element={<AboutPage />} />
+        <Route path='our-clients' element={<OurClients />} />
+        <Route path='contact-us' element={<ContactUs />} />
+        <Route path='no-surprise-act' element={<NoSurpriseAct />} />
+        <Route path='federal-legislative-update' element={<Legal />} />
+      </Route>
+      {/* 404 outside NavBar */}
+      <Route path='*' element={<NotFoundPage />} />
+    </Routes>
+  );
+}
+
+function App() {
+  return (
     <BrowserRouter>
-      <Routes> 
-        <Route path='/' element={<NavBar />}>
-          <Route index element={<HomePage />}/>
-          <Route path='*' element={<NotFoundPage />}/>
-          <Route path='our-services' element={<ServicesPage />}/>
-          <Route path='about-us' element={<AboutPage />}/>
-          <Route path='our-clients' element={<OurClients />}/>
-          <Route path='contact-us' element={<ContactUs />}/>
-          <Route path='no-surprise-act' element={<NoSurpriseAct />}/>
-          <Route path='federal-legislative-update' element={<Legal />}/>
-        </Route>
-      </Routes>
+      <AppRoutes />
     </BrowserRouter>
   );
 }
