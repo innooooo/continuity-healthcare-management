@@ -8,7 +8,7 @@ const Footer = () => {
         className="fade-in-section"
       >
         <img 
-          src='/icons/LOGO With Black Background.webp'
+          src='/icons/logo-black.webp'
           alt="Company Logo"
           style={{ height: "350px", width: "auto" }}
           className="logo-hover"
