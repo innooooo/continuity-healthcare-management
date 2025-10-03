@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { useEffect } from "react";
 import HomePage from './routes/HomePage';
 import NavBar from './components/NavBar';
 import NotFoundPage from './routes/NotFoundPage';
@@ -11,6 +12,15 @@ import Legal from './components/Legal';
 import NoSurpriseAct from './components/NoSurpriseAct';
 
 function App() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (window.va) {
+      window.va("pageview"); // fire analytics on every route change
+    }
+  }, [location]);
+
   return (
     <BrowserRouter>
       <Routes> 
