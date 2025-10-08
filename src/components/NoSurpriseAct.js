@@ -106,17 +106,26 @@ const NoSurpriseAct = () => {
       <section style={{display:"flex",flexDirection:"column",margin:"20px"}}>
         <h3 className="section-title">Mission Statement</h3>
         <div className="section-text">
-          To enhance the financial success of out-of-network providers by leveraging expert IDR
-          management in innovative technology solutions.
+          Our mission is to empower healthcare providers with tailored consulting solutions that optimize 
+          logistical operations across the entire continuum of care. We leverage advanced analytics, 
+          process redesign, and innovative technologies to streamline supply chain management, improve patient flow, 
+          enhance medication and equipment delivery, and support workforce efficiency. By aligning operations with 
+          patient-centric strategies, we help providers reduce delays, cut waste, and maximize resource utilization. 
+          Through these efforts, we enable healthcare organizations to deliver safer, faster, and more compassionate 
+          care experiences—improving both patient satisfaction and organizational performance.
         </div>
       </section>
 
       <section style={{display:"flex",flexDirection:"column",margin:"20px"}}>
         <h3 className="section-title">Vision Statement</h3>
         <div className="section-text">
-          Our vision is to become the leading source of IDR services and establish the standard
-          for transparency, integrity, excellence, innovation, and transformative solutions within
-          the healthcare industry.
+          To revolutionize healthcare delivery and logistics by reimagining how care, resources, 
+          and innovations flow through the healthcare ecosystem. We envision a future where providers, 
+          patients, and partners are seamlessly connected through intelligent, adaptive, and sustainable
+           logistical systems. By introducing data-driven insights, digital transformation, 
+           and human-centered design into healthcare operations, we aim to eliminate inefficiencies, 
+           reduce costs, and ultimately ensure that every patient receives timely, high-quality care. 
+           Our vision is a world where healthcare logistics is not a barrier, but a catalyst for accessible, equitable, and life-enhancing health outcomes.
         </div>
       </section>
 
@@ -207,7 +216,7 @@ const NoSurpriseAct = () => {
           </p>
           <p>
             Over the last two years of working in the IDR insurance sector, we've found that self-
-            funded insurance companies have not adhered to NSA regulations during the claims
+            funded insurance companies have not adhered to NSA regulations during the claims
             processing procedure.
             <span>Providers are not getting paid QPA (Qualified Payment Amount) on the front end</span>
             <ul>

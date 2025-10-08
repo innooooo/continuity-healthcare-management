@@ -44,7 +44,7 @@ const Legal = () => {
 
       <section style={{display:"flex",flexDirection:"column",margin:"20px"}}>
         <h4 className="section-title">
-          What Provider types does IDR support:HaloMD Supports the No Surprises Act Enforcement Act
+          What Provider types does IDR support: HaloMD Supports the No Surprises Act Enforcement Act
         </h4>
         <div className="section-text">
           At HaloMD, we are dedicated to advocating for healthcare providers as they navigate the

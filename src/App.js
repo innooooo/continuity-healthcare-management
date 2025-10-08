@@ -38,7 +38,18 @@ function AppRoutes() {
   );
 }
 
+const underMaintenance = false;
+
 function App() {
+  if (underMaintenance) {
+    return (
+      <div>
+        <h1>Site temporarily unavailable</h1>
+        <p>Please contact the relevant party for information...</p>
+      </div>
+    );
+  }
+
   return (
     <BrowserRouter>
       <AppRoutes />

@@ -2,7 +2,6 @@ import services from '../data/services'
 import ServicesModal from '../components/ServicesModal'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { LucideSection } from 'lucide-react';
 
 
 const Services = () => {
