@@ -38,7 +38,7 @@ function AppRoutes() {
   );
 }
 
-const underMaintenance = true;
+const underMaintenance = false;
 
 function App() {
   if (underMaintenance) {
